@@ -2,17 +2,17 @@
 # Scissors beats Paper;
 # Paper beats Rock.
 
-import random
+from random import randint
 
 
 player_choice = input("Pick one among Rock, Paper or Scissors: ")
-print("Player has picked: " + player_choice)
+print(f"Player has picked: {player_choice}")
 
 
 computer_choices = ["Rock", "Paper", "Scissors"]
-computer_pick = random.randrange(0, 3)
+computer_pick = randint(0, 2)
 computer_choice = computer_choices[computer_pick]
-print("Computer has picked: " + computer_choice)
+print(f"Computer has picked: {computer_choice}")
 
 outcome = "Thinking!"
 
@@ -40,4 +40,4 @@ elif player_choice == "Scissors":
 else:
     print("Not a valid option. Try again!")
 
-print("Result: " + outcome)
+print(f"Result: {outcome}")
